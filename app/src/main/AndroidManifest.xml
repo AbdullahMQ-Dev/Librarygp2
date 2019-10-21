@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.BookDetailsActivity"></activity>
+        <activity android:name=".Activities.CategoryPageActivity"></activity>
+        <activity android:name=".Activities.PickCategoreyActivity" />
+        <activity android:name=".Activities.BookDetailsActivity" />
         <activity android:name=".Activities.AllBooksActivity" />
         <activity android:name=".Activities.uploadBookActivity" />
         <activity android:name=".Activities.LoginActivity">

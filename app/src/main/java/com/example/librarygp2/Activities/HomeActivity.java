@@ -50,6 +50,14 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        category.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent category = new Intent(getApplicationContext(),PickCategoreyActivity.class);
+                startActivity(category);
+            }
+        });
+
     }
 
 }
