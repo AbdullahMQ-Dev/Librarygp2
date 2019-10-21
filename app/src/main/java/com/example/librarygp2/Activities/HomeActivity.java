@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity {
     private Button allbooks , category,setting, upload,logout ;
-    private FirebaseAuth mAuth ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
