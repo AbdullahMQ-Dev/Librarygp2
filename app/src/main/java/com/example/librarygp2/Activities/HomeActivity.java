@@ -57,7 +57,13 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(category);
             }
         });
-
+        setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent setting = new Intent(getApplicationContext(),SettingActivity.class);
+                startActivity(setting);
+            }
+        });
     }
 
 }

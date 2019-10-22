@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class LoginActivity extends AppCompatActivity {
 
     private EditText usereamil,userpassword ;
-    private Button signin_btn , signup_btn ;
+    private Button signin_btn , signup_btn ,forget;
     private FirebaseAuth mAuth ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +56,15 @@ public class LoginActivity extends AppCompatActivity {
                 }else {
                     SignIn(email,password);
                 }
+            }
+        });
+
+        forget = findViewById(R.id.forgetpass);
+        forget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent ForgetPass = new Intent(getApplicationContext(),ForgetPassActivity.class);
+                startActivity(ForgetPass);
             }
         });
     }
