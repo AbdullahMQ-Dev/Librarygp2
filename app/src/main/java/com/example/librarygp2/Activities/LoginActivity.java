@@ -75,8 +75,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                if (task.isSuccessful()){
                    updateUI();
-               }else {
-                   ShowMessage(task.getException().getMessage());
+               }else if (!task.isSuccessful()){
+                   ShowMessage("Email or password wrong !");
                }
             }
         });

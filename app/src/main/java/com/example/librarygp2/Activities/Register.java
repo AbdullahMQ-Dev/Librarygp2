@@ -68,8 +68,8 @@ public class Register extends AppCompatActivity {
                                 ShowMessage("Account Created");
                                 UpdateUserInfo(username,mAuth.getCurrentUser());
 
-                            }else {
-                                ShowMessage("Account Creation failed" + task.getException().getMessage());
+                            }else if (!task.isSuccessful()){
+                                ShowMessage("Email is used ");
                             }
                     }
                 });
