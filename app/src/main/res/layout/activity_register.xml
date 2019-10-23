@@ -37,7 +37,7 @@
         android:layout_marginTop="80dp"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPersonName|textWebPassword"
+        android:inputType="textPersonName|textPassword|textWebPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ETemail" />
@@ -51,4 +51,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ETpassword" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

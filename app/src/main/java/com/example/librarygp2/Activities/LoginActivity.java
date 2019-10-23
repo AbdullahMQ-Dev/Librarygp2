@@ -52,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
                 final String password = userpassword.getText().toString();
 
                 if (email.isEmpty() || password.isEmpty()){
-                    ShowMessage("Please fill all field");
+                    ShowMessage("Please fill all the fields");
                 }else {
                     SignIn(email,password);
                 }

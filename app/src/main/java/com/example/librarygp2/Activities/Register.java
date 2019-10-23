@@ -43,7 +43,7 @@ public class Register extends AppCompatActivity {
                 final String password = userpassword.getText().toString();
 
                 if (email.isEmpty() || username.isEmpty() || password.isEmpty()){
-                    ShowMessage("Please fill All fields ");
+                    ShowMessage("Please fill All the fields ");
                 }else {
                     
                     CreateUserAccount(username,email,password);
@@ -69,7 +69,7 @@ public class Register extends AppCompatActivity {
                                 UpdateUserInfo(username,mAuth.getCurrentUser());
 
                             }else {
-                                ShowMessage("Account Creation field" + task.getException().getMessage());
+                                ShowMessage("Account Creation failed" + task.getException().getMessage());
                             }
                     }
                 });
@@ -85,7 +85,7 @@ public class Register extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()){
-                            ShowMessage("Registor Complate");
+                            ShowMessage("Register Complete");
                             updateUI();
                         }
                     }
