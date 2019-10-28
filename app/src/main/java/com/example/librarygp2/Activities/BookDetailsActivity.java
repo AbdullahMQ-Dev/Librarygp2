@@ -104,7 +104,7 @@ public class BookDetailsActivity extends AppCompatActivity {
         bookowner.setText(owner);
         bookdescription.setText(description);
 
-        Picasso.with(this).load(picurl).into(picture);
+        Picasso.get().load(picurl).into(picture);
 
         iniCommentList();
 
