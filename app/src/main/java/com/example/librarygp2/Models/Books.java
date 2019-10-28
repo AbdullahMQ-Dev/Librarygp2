@@ -7,16 +7,27 @@ public class Books {
     private String userId ;
     private String category ;
     private String uname ;
+    private String picture ;
+
 
     public Books() {
     }
 
-    public Books(String title, String description,String category, String userId,String uname) {
+    public Books(String title,String picture, String description,String category, String userId,String uname) {
         this.title = title;
+        this.picture = picture ;
         this.description = description;
         this.category = category ;
         this.userId = userId;
         this.uname = uname;
+    }
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
     }
 
     public String getUname() {

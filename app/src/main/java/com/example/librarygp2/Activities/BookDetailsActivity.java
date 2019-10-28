@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +26,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import org.w3c.dom.Comment;
 
@@ -35,6 +38,7 @@ public class BookDetailsActivity extends AppCompatActivity {
     EditText edComment ;
     Button addcommentbtn;
     String bookkey ;
+    ImageView picture ;
     FirebaseAuth firebaseAuth ;
     FirebaseUser firebaseUser ;
     FirebaseDatabase firebaseDatabase ;
@@ -53,6 +57,7 @@ public class BookDetailsActivity extends AppCompatActivity {
         bookdescription = findViewById(R.id.Bookdetails_description);
         edComment = findViewById(R.id.AddComment);
         addcommentbtn = findViewById(R.id.comment_btn);
+        picture = findViewById(R.id.BookPic);
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
@@ -67,6 +72,7 @@ public class BookDetailsActivity extends AppCompatActivity {
                 String uname = firebaseUser.getDisplayName();
 
                 Comments comment = new Comments(comment_content,uid,uname);
+                if (!comment.getContent().isEmpty()){
                 commentReference.setValue(comment).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
@@ -78,7 +84,10 @@ public class BookDetailsActivity extends AppCompatActivity {
                     public void onFailure(@NonNull Exception e) {
                         ShowMessage("Faill to add Comment"+e.getMessage());
                     }
-                });
+                });}
+                else {
+                    ShowMessage("Write comment !!");
+                }
 
             }
         });
@@ -89,11 +98,13 @@ public class BookDetailsActivity extends AppCompatActivity {
         String category = getIntent().getExtras().get("category").toString();
         String owner = getIntent().getExtras().get("username").toString();
         bookkey = getIntent().getExtras().get("bookKey").toString();
-
+        String picurl = getIntent().getExtras().get("picture").toString();
         setTitle(category);
         booktitle.setText(title);
         bookowner.setText(owner);
         bookdescription.setText(description);
+
+        Picasso.with(this).load(picurl).into(picture);
 
         iniCommentList();
 

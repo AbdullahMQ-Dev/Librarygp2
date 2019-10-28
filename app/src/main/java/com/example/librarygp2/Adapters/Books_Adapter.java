@@ -71,6 +71,8 @@ public class Books_Adapter extends RecyclerView.Adapter<Books_Adapter.MyViewHold
                     bookdetailsAct.putExtra("bookKey",mData.get(position).getBookKey());
                     bookdetailsAct.putExtra("category",mData.get(position).getCategory());
                     bookdetailsAct.putExtra("username",mData.get(position).getUname());
+                    bookdetailsAct.putExtra("picture",mData.get(position).getPicture());
+
 
                     mContext.startActivity(bookdetailsAct);
 
