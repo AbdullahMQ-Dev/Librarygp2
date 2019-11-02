@@ -33,11 +33,11 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 public class uploadBookActivity extends AppCompatActivity {
-    Button upload ;
+    Button upload ,picupload;
     EditText Edtitle,Eddescription ;
     String Catdrop ;
     Spinner categorydopdown;
-    ImageView picupload ;
+    ImageView Img ;
     private FirebaseAuth mAuth ;
     private FirebaseUser currentuser ;
     private static final int PReqCode = 2 ;
@@ -52,10 +52,11 @@ public class uploadBookActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         currentuser = mAuth.getCurrentUser() ;
 
+
         Edtitle = findViewById(R.id.edtitle);
         Eddescription = findViewById(R.id.eddescription);
-        picupload = findViewById(R.id.imageButtonUpload);
-
+        picupload = findViewById(R.id.BrowsGal);
+        Img = findViewById(R.id.imageView);
 
         picupload.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -180,7 +181,11 @@ public class uploadBookActivity extends AppCompatActivity {
         if (resultCode == RESULT_OK && requestCode == REQUESCODE && data != null){
 
             pickImguri = data.getData();
-            picupload.setImageURI(pickImguri);
+            Img.setImageURI(pickImguri);
+           // Toast.makeText(getApplicationContext(),pickImguri.toString(),Toast.LENGTH_LONG).show();
+            //Img.setImageURI(pickImguri);
+            //  Picasso.get().load(pickImguri).into(Img);
+            picupload.setVisibility(View.GONE);
 
 
         }

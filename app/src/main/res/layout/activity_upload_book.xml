@@ -6,6 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".Activities.uploadBookActivity">
 
+    <Button
+        android:id="@+id/UploadBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Upload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eddescription" />
+
+    <Button
+        android:id="@+id/BrowsGal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:text="Brows"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/edtitle" />
+
     <EditText
         android:id="@+id/edtitle"
         android:layout_width="wrap_content"
@@ -22,7 +43,7 @@
         android:id="@+id/eddescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="Description"
         android:inputType="textPersonName"
@@ -30,25 +51,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/catdopdown" />
 
-    <Button
-        android:id="@+id/UploadBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:text="Upload"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="351dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eddescription" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/BrowsGal"
+        app:layout_constraintTop_toBottomOf="@+id/edtitle"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <Spinner
         android:id="@+id/catdopdown"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:layout_marginEnd="76dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="56dp"
         android:spinnerMode="dialog"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButtonUpload" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/textView2"
@@ -74,19 +97,5 @@
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtitle" />
-
-    <ImageView
-        android:id="@+id/imageButtonUpload"
-        android:layout_width="235dp"
-        android:layout_height="136dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="20dp"
-        android:background="#2d2d2d"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/edtitle"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
