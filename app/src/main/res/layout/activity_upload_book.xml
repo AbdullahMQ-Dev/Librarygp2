@@ -15,7 +15,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eddescription" />
+        app:layout_constraintTop_toBottomOf="@+id/eddescription"
+        android:background="@drawable/button_gradient"/>
 
     <Button
         android:id="@+id/BrowsGal"
@@ -25,7 +26,8 @@
         android:layout_marginTop="40dp"
         android:text="Brows"
         app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/edtitle" />
+        app:layout_constraintTop_toBottomOf="@+id/edtitle"
+        android:background="@drawable/button_gradient"/>
 
     <EditText
         android:id="@+id/edtitle"

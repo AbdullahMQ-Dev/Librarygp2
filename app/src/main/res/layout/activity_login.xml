@@ -39,7 +39,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edpassword" />
+        app:layout_constraintTop_toBottomOf="@+id/edpassword"
+        android:background="@drawable/button_gradient"/>
 
     <Button
         android:id="@+id/signupBtn"
@@ -50,7 +51,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:background="@drawable/button_gradient"/>
 
     <TextView
         android:id="@+id/textView"
@@ -74,5 +76,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signupBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/signupBtn"
+        android:background="@drawable/button_gradient"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
