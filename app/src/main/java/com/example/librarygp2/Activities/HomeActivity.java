@@ -65,5 +65,11 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
     }
+    public void Bot(View view){
+      //  String message=edt_txt.getText().toString();
+        Intent intent=new Intent(getApplicationContext(),Bot.class);
+       // intent.putExtra(KARAN,message);
+        startActivity(intent);
+    }
 
 }

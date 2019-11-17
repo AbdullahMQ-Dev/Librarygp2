@@ -2,8 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.librarygp2">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.ForgetPassActivity"></activity>
+        <activity android:name=".Activities.Bot"></activity>
+        <activity android:name=".Activities.ForgetPassActivity" />
         <activity android:name=".Activities.SettingActivity" />
         <activity android:name=".Activities.CategoryPageActivity" />
         <activity android:name=".Activities.PickCategoreyActivity" />
@@ -28,6 +30,10 @@
         <activity android:name=".Activities.HomeActivity" />
         <activity android:name=".Activities.Register" />
         <activity android:name=".MainActivity" />
+        <activity
+            android:name="Activities.BookDetailsActivity"
+            android:windowSoftInputMode="adjustPan" />
+
     </application>
 
 </manifest>
