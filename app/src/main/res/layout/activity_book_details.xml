@@ -11,12 +11,12 @@
         android:layout_width="98dp"
         android:layout_height="55dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/button_gradient"
         android:text="Add Comment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.637"
         app:layout_constraintStart_toEndOf="@+id/AddComment"
-        app:layout_constraintTop_toBottomOf="@+id/commentList"
-        android:background="@drawable/button_gradient"/>
+        app:layout_constraintTop_toBottomOf="@+id/commentList" />
 
     <EditText
         android:id="@+id/AddComment"
@@ -34,25 +34,24 @@
         android:id="@+id/Bookdetails_owener"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
         android:text="TextView"
         android:textColor="#FF0000"
+        app:layout_constraintBottom_toTopOf="@+id/BookPic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
-        app:layout_constraintStart_toEndOf="@+id/Bookdetails_title"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Bookdetails_title" />
 
     <TextView
         android:id="@+id/Bookdetails_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="24dp"
         android:text="TextView"
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintHorizontal_bias="0.565"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -64,16 +63,15 @@
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BookPic" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/commentList"
         android:layout_width="414dp"
         android:layout_height="114dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Bookdetails_description" />
 
@@ -81,9 +79,46 @@
         android:id="@+id/BookPic"
         android:layout_width="323dp"
         android:layout_height="193dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="68dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Bookdetails_title"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/textView999"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Title :"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/Bookdetails_title"
+        app:layout_constraintHorizontal_bias="0.234"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Owner :"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/Bookdetails_owener"
+        app:layout_constraintHorizontal_bias="0.264"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView999" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Description"
+        android:textColor="#A9FF0000"
+        app:layout_constraintEnd_toStartOf="@+id/Bookdetails_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BookPic" />
 </androidx.constraintlayout.widget.ConstraintLayout>
