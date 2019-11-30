@@ -40,26 +40,7 @@ public class AllBooksActivity extends AppCompatActivity {
         BookrecyclerView.setLayoutManager(new LinearLayoutManager(AllBooksActivity.this));
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Books");
-//search function // need adapter list name
 
-       /*search= (EditText) findViewById(R.id.search);
-
-        search.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                (this).books_adapter.getFilter().filter(s);
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });*/
     }
     @Override
     protected void onStart() {

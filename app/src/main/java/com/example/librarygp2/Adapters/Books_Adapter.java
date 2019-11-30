@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,6 +15,7 @@ import com.example.librarygp2.Models.Books;
 import com.example.librarygp2.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -45,6 +47,7 @@ public class Books_Adapter extends RecyclerView.Adapter<Books_Adapter.MyViewHold
 
         holder.title.setText(mData.get(position).getTitle());
         holder.category.setText(mData.get(position).getCategory());
+        Picasso.get().load(mData.get(position).getPicture()).into(holder.pic);
 
     }
 
@@ -55,10 +58,12 @@ public class Books_Adapter extends RecyclerView.Adapter<Books_Adapter.MyViewHold
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
         TextView title , category ;
+        ImageView pic ;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.BookTitle);
             category = itemView.findViewById(R.id.BookCategory);
+            pic = itemView.findViewById(R.id.imageViewonrow) ;
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

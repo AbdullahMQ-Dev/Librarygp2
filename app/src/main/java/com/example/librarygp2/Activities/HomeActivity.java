@@ -11,18 +11,19 @@ import com.example.librarygp2.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity {
-    private Button home , category,setting, upload,logout ;
+    private Button home , category,setting, upload,logout,boot ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.home_v2);
         setTitle("Home");
-        home = findViewById(R.id.allbookd_btn);
-        category = findViewById(R.id.cat_btn);
-        setting = findViewById(R.id.setting_btn);
-        upload = findViewById(R.id.uploadbook_btn);
-        logout = findViewById(R.id.logout_btn);
+        home = findViewById(R.id.AllBooksV2_btn);
+        category = findViewById(R.id.CategoryV2_btn);
+        setting = findViewById(R.id.SettingV2_btn);
+        upload = findViewById(R.id.UploadV2_btn);
+        logout = findViewById(R.id.LogoutV2_btn);
+        boot = findViewById(R.id.BootV2_btn);
 
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,12 +65,14 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(setting);
             }
         });
+        boot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent boot =new Intent(getApplicationContext(),Bot.class);
+                startActivity(boot);
+            }
+        });
     }
-    public void Bot(View view){
-      //  String message=edt_txt.getText().toString();
-        Intent intent=new Intent(getApplicationContext(),Bot.class);
-       // intent.putExtra(KARAN,message);
-        startActivity(intent);
-    }
+
 
 }
