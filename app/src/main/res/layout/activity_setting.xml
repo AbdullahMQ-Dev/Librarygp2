@@ -22,20 +22,21 @@
         android:id="@+id/UpdateBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
         android:background="@drawable/button_gradient"
-        android:drawableTop="@drawable/bacground_4"
 
+        android:drawableTop="@drawable/bacground_4"
         android:text="Update"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="289dp" />
+        app:layout_constraintTop_toBottomOf="@+id/edusernameupdate" />
 
     <Button
         android:id="@+id/forgatePassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="76dp"
         android:background="@drawable/button_gradient"
         android:drawableTop="@drawable/bacground_4"
         android:text="reset password"

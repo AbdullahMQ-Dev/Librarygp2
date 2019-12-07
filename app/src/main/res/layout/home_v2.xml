@@ -1,144 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
     android:gravity="center"
-    android:layout_marginBottom="150dp"
-    android:layout_marginTop="150dp">
-    <LinearLayout
-        android:layout_width="250dp"
-        android:layout_height="300dp"
-        android:layout_weight="2"
-        android:orientation="horizontal">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <Button
-                android:id="@+id/AllBooksV2_btn"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:background="@drawable/background_6"
-                android:drawableTop="@drawable/list"
-                android:shadowColor="#2196F3"
-                android:text="All Books"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:textAllCaps="false"
-                android:paddingTop="20dp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+    android:orientation="vertical">
 
-            <Button
-                android:id="@+id/CategoryV2_btn"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/background_7"
-                android:drawableTop="@drawable/category"
-                android:paddingTop="15dp"
-                android:shadowColor="#2196F3"
-                android:text="Category"
-                android:textAllCaps="false"
-                android:textStyle="bold" />
-        </LinearLayout>
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="250dp"
-        android:layout_height="300dp"
-        android:layout_weight="2"
-        android:orientation="horizontal">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <Button
-                android:id="@+id/SettingV2_btn"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:background="@drawable/background_8"
-                android:drawableTop="@drawable/setting"
-                android:shadowColor="#2196F3"
-                android:text="Setting"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:textAllCaps="false"
-                android:paddingTop="15dp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <Button
-                android:id="@+id/UploadV2_btn"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:background="@drawable/background_9"
-                android:drawableTop="@drawable/upload"
-                android:shadowColor="#2196F3"
-                android:text="Upload"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"
-                android:textAllCaps="false"
-                android:paddingTop="15dp"/>
-        </LinearLayout>
+    <Button
+        android:id="@+id/AllBooksV2_btn"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/background_6"
+        android:drawableTop="@drawable/list"
+        android:paddingTop="20dp"
+        android:shadowColor="#2196F3"
+        android:text="All Books"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="250dp"
-        android:layout_height="300dp"
-        android:layout_weight="2"
-        android:orientation="horizontal">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <Button
-                android:id="@+id/BootV2_btn"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:background="@drawable/background_10"
-                android:drawableTop="@drawable/bot"
-                android:shadowColor="#2196F3"
-                android:text="Bot"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:textAllCaps="false"
-                android:paddingTop="15dp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+    <Button
+        android:id="@+id/CategoryV2_btn"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/background_7"
+        android:drawableTop="@drawable/category"
+        android:paddingTop="15dp"
+        android:shadowColor="#2196F3"
+        android:text="Category"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toEndOf="@+id/AllBooksV2_btn"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/LogoutV2_btn"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/background_11"
-                android:drawableTop="@drawable/lock"
-                android:shadowColor="#2196F3"
-                android:text="Log Out"
-                android:textAllCaps="false"
-                android:textStyle="bold"
-                android:paddingTop="15dp"/>
-        </LinearLayout>
+    <Button
+        android:id="@+id/SettingV2_btn"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_8"
+        android:drawableTop="@drawable/setting"
+        android:paddingTop="15dp"
+        android:shadowColor="#2196F3"
+        android:text="Setting"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UploadV2_btn" />
 
-    </LinearLayout>
+    <Button
+        android:id="@+id/UploadV2_btn"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_9"
+        android:drawableTop="@drawable/upload"
+        android:paddingTop="15dp"
+        android:shadowColor="#2196F3"
+        android:text="Upload"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AllBooksV2_btn" />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/BootV2_btn"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/background_10"
+        android:drawableTop="@drawable/bot"
+        android:paddingTop="15dp"
+        android:shadowColor="#2196F3"
+        android:text="Bot"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/UploadV2_btn"
+        app:layout_constraintTop_toBottomOf="@+id/CategoryV2_btn" />
+
+    <Button
+        android:id="@+id/LogoutV2_btn"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/background_11"
+        android:drawableTop="@drawable/lock"
+        android:paddingTop="15dp"
+        android:shadowColor="#2196F3"
+        android:text="Log Out"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SettingV2_btn"
+        app:layout_constraintTop_toBottomOf="@+id/BootV2_btn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

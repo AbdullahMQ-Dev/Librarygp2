@@ -58,7 +58,7 @@ public class Register extends AppCompatActivity {
     }
 
 
-    private void CreateUserAccount(final String username, String email, String password) {
+    private void CreateUserAccount(final String username, String email, final String password) {
 
         mAuth.createUserWithEmailAndPassword(email,password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -69,7 +69,13 @@ public class Register extends AppCompatActivity {
                                 UpdateUserInfo(username,mAuth.getCurrentUser());
 
                             }else if (!task.isSuccessful()){
-                                ShowMessage("Email is used ");
+
+                                if (password.length() < 6){
+                                    ShowMessage("Password should be 6 digit or more ");
+                                }else {
+                                    ShowMessage("Email is used ");
+                                }
+
                             }
                     }
                 });

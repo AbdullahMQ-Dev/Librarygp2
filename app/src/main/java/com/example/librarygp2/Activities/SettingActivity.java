@@ -46,7 +46,9 @@ public class SettingActivity extends AppCompatActivity {
         passnew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent password = new Intent(getApplicationContext(),ForgetPassActivity.class);
+                password.putExtra("Email",currentuser.getEmail());
                 startActivity(password);
                 finish();
             }
@@ -63,6 +65,9 @@ public class SettingActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()){
                             ShowMessage("username Changed");
+                            Intent home = new Intent(getApplicationContext(),HomeActivity.class);
+                            startActivity(home);
+                            finish();
                         }
                     }
                 });

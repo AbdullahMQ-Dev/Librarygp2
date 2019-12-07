@@ -37,6 +37,9 @@ public class ForgetPassActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()){
                             ShowMessage("Email Sent");
+                            Intent home = new Intent(getApplicationContext(),HomeActivity.class);
+                            startActivity(home);
+                            finish();
 
                         }else {
                             ShowMessage("reset filed");

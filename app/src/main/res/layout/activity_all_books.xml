@@ -9,10 +9,12 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/allBooks"
-        android:layout_width="405dp"
-        android:layout_height="708dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="40dp" />
+        android:layout_width="373dp"
+        android:layout_height="606dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
